@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang=en>
+    <head>
+        <title>To Do List | edit {{.Name}}</title>
+        <link rel="stylesheet" type="text/css" href="/styles/styles.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <h1>Another todo list made in Golang!</h1>
+        <h2>Editting task: {{.Name}}</h2>
+        <div>
+            <form action="/save/{{.ID}}" method="POST">
+                <div> <input type="text" name="name" value="{{.Name}}" hidden> </div>
+                <div> <textarea name="description" class="form-control" rows="3" style="width: 50%;">{{.Description}}</textarea></div>
+                <div> <input type="submit" id="button" value="Save"> </div>
+            </form>
+        </div>
+    </body>
+</html> 

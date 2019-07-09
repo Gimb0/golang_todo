@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang=en>
+    <head>
+        <title>To Do List | edit {{.Name}}</title>
+        <link rel="stylesheet" type="text/css" href="/styles/styles.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <h1>Another todo list made in Golang!</h1>
+        <h2>Viewing task: {{.Name}}</h2>
+        <div>
+                <div> <textarea name="body" class="form-control" rows="3" readonly style="width: 50%;">{{.Description}}</textarea></div>
+                <div> <a id="button" href="/edit/{{.ID}}">Edit {{.Name}}</a> </div>
+        </div>
+    </body>
+</html>
